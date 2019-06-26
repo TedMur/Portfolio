@@ -1,0 +1,46 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-image: url("https://images.unsplash.com/photo-1489777404823-acccdc7d9994?ixlib=rb-1.2.1&auto=format&fit=crop&w=2853&q=80");
+    background-size: cover;
+    background-position: center;
+    font-family: 'Kanit', sans-serif;
+}
+
+.navbar-brand{
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+}
+
+#bs-example-navbar-collapse-1{
+    font-size: 1.5rem;
+}
+
+#navbar {
+    padding: 6px;
+    color: #ECECEC;
+}
+
+
+/*Within head background img*/
+#content {
+    text-align: center;
+    padding-top: 25%;
+    color: aliceblue;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.6),
+                 0px 4px 13px rgba(0, 0, 0, 0.1),
+                 0px 4px 23px rgba(0, 0, 0, 0.1)
+}
+
+.title {
+    font-family: 'Pacifico', cursive;
+    font-size: 5rem;
+}
+
+hr { 
+    width: 400px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}

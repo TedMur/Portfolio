@@ -1,0 +1,20 @@
+body {
+    background-color: #D2DEEE;
+}
+
+.row {
+    padding-top: 150px
+}
+
+.navbar-header {
+    padding: 15px;
+}
+
+#bs-nav-demo {
+    padding: 15px;
+}
+
+a href {
+    height: 100px;
+    width: 100px
+}

@@ -1,0 +1,64 @@
+body {
+    background-color: #EEEEEE;
+}
+
+.container {
+    background-color: white;
+}
+
+/*---------- nav-bar -----------*/
+
+.navbar-brand {
+    font-family: 'Modak', cursive;
+}
+
+#navbar-nav {
+    font-family: 'Just Another Hand', cursive;
+}
+
+li.nav-item {
+    text-transform: uppercase;
+}
+
+
+/* ----------------------------- */
+
+#main-img{
+    height: 85%;
+    width: 100%;
+    padding-top: 60px;
+
+}
+
+#prof-img {
+    border-radius: 80%;
+    height: 40%;
+    width: 40%;
+}
+
+#my-name {
+    padding-top: 30px;
+}
+
+
+
+
+
+
+/* Pagination links */
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+
+/* Style the active/current link */
+.pagination a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* Add a grey background color on mouse-over */
+.pagination a:hover:not(.active) {background-color: #ddd;}

@@ -1,0 +1,40 @@
+
+
+#contact-us {
+    color: orangered;
+    text-transform: uppercase; 
+}
+
+#top-part {
+    background-image: url(../resources/jez-timms-761-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#content {
+    text-align: center;
+    padding-top: 5%;
+    color: aliceblue;
+}
+
+label {
+    color: aliceblue;
+}
+
+.col-lg-4{
+    padding-top: 1%;
+}
+
+.col-md-12 {
+    padding-top: 20px;
+}
+
+#middle-bottom {
+    background-color: #E8E8E8;
+}
+
+img{
+    height: 50px;
+    width: 70px;
+}
+
