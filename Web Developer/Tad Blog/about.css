@@ -1,0 +1,32 @@
+body {
+    background-color: #EEEEEE;
+}
+
+/*---------- nav-bar -----------*/
+
+.navbar-brand {
+    font-family: 'Modak', cursive;
+}
+
+#navbar-nav {
+    font-family: 'Just Another Hand', cursive;
+}
+
+li.nav-item {
+    text-transform: uppercase;
+}
+
+
+/* ----------- header ------------- */
+
+
+
+#header-img{
+    height: 110%;
+    width: 100%;
+}
+
+
+#my-name {
+    padding-top: 30px;
+}

@@ -2,10 +2,6 @@ body {
     background-color: #EEEEEE;
 }
 
-.container {
-    background-color: white;
-}
-
 /*---------- nav-bar -----------*/
 
 .navbar-brand {
@@ -21,20 +17,15 @@ li.nav-item {
 }
 
 
-/* ----------------------------- */
+/* ----------- header ------------- */
 
-#main-img{
-    height: 85%;
+
+
+#header-img{
+    height: 110%;
     width: 100%;
-    padding-top: 60px;
-
 }
 
-#prof-img {
-    border-radius: 80%;
-    height: 40%;
-    width: 40%;
-}
 
 #my-name {
     padding-top: 30px;
