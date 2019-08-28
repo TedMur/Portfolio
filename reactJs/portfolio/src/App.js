@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Projects from './Projects';
+import SocialProfiles from './SocialProfiles';
 
 class App extends Component {
     // constructor() {
@@ -78,8 +79,11 @@ class App extends Component {
                             )
                         }
                     </ul>
-                </div><hr />
+                </div>
+                <hr />
                 <Projects />
+                <hr />
+                <SocialProfiles />
             </div>
         )
     }
