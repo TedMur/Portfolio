@@ -6,7 +6,7 @@ class SocialProfile extends Component {
         const { link, image } = this.props.socialProfile;
 
         return(
-            <div style={{ display: 'inline-block', target: '_blank' }}>
+            <div style={{ display: 'inline-block' }}>
                 <a href={link}><img src={image} alt='social-profile' style={{width: 35, height: 35, margin: 7}}/></a>
             </div>
         )

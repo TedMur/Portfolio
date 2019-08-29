@@ -8,8 +8,8 @@ class Project extends Component {
     render() {
         const {title, image, description, link} = this.props.project;
         return(
-            <div style={{display: 'inline-block', width: 450, margin: 5}}>
-                <h3>{title}</h3>
+            <div style={{display: 'inline-block', width: 500, margin: 20}}>
+                <h3 className='project-each-title'>{title}</h3>
                 <img src={image} alt='profile' style={{width: 200, height: 120}}></img>
                 <p>{description}</p>
                 <a href={link}>{link}</a>
@@ -21,8 +21,8 @@ class Project extends Component {
 class Projects extends Component {
     render() {
         return(
-            <div>
-                <h2>Highlighted Projects</h2>
+            <div className='projects'>
+                <h2 className='project-title'>Highlighted Projects</h2>
                 <div>
                     {
                         PROJECTS.map(PROJECT => {
