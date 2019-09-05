@@ -14,3 +14,25 @@ h1, h2, h3, h4, h5 {
     font-family: 'Lobster', sans-serif;
 }
 
+.track {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.track-image {
+    width: 250px;
+    height: 250px;
+}
+
+.track-text {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    position: absolute;
+    width: 250px;
+    /* bottom: 0px; */
+}
