@@ -27190,7 +27190,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var correctGuessesRecordKey = 'CORRECT_GUESSES_RECORD';
 
 var checkRecord = function checkRecord(correctGuesses) {
-  var record = Numebr(localStorage.getItem(correctGuessesRecordKey));
+  var record = Number(localStorage.getItem(correctGuessesRecordKey));
 
   if (correctGuesses > record) {
     localStorage.setItem(correctGuessesRecordKey, correctGuesses);
@@ -27210,7 +27210,13 @@ var GameState = function GameState(_ref) {
   var remaining = _ref.remaining,
       correctGuesses = _ref.correctGuesses;
   var guessText = correctGuesses === 1 ? 'guess' : 'guesses';
-  return _react.default.createElement("div", null, _react.default.createElement("p", null, remaining, " cards remaining"), _react.default.createElement("p", null, correctGuesses, " correct ", guessText));
+
+  var _checkRecord = checkRecord(correctGuesses),
+      record = _checkRecord.record,
+      isNewRecord = _checkRecord.isNewRecord;
+
+  var recordLabel = isNewRecord ? "New record" : "Record";
+  return _react.default.createElement("div", null, _react.default.createElement("h3", null, recordLabel, ": ", record), _react.default.createElement("p", null, remaining, " cards remaining"), _react.default.createElement("p", null, correctGuesses, " correct ", guessText));
 };
 
 var _default = (0, _reactRedux.connect)(function (_ref2) {
@@ -27682,7 +27688,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49754" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60175" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
