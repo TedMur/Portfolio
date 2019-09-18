@@ -188,3 +188,5 @@ Project Link: [https://github.com/github_username/repo](https://github.com/githu
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: images/screenshot.png
+
+Files within this repository is aiming to leverage knowledge from Data Analytics Boot Camp and to make it more practical than just "knowledge".
