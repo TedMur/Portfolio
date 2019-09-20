@@ -6,7 +6,11 @@ const SocialProfile = props => {
 
     return (
         <div style={{ display: 'inline-block' }}>
-            <a href={link}><img src={image} alt='social-profile' style={{width: 35, height: 35, margin: 7}}/></a>
+            <a href={link}>
+                <img src={image} 
+                alt='social-profile' 
+                style={{width: 35, height: 35, margin: 7}}/>
+            </a>
         </div>
     )
 }
@@ -15,7 +19,6 @@ const SocialProfile = props => {
 
 const SocialProfiles = () => (
     <div>
-        <h2>Connect with me!</h2>
         <div>
             {
                 SOCIAL_PROFILES.map( SOCIAL_PROFILE => {

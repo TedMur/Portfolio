@@ -29432,12 +29432,14 @@ var createBrowserHistory = function createBrowserHistory() {
 };
 
 exports.default = createBrowserHistory;
-},{"warning":"../node_modules/history/node_modules/warning/browser.js","invariant":"../node_modules/invariant/browser.js","./LocationUtils":"../node_modules/history/LocationUtils.js","./PathUtils":"../node_modules/history/PathUtils.js","./createTransitionManager":"../node_modules/history/createTransitionManager.js","./DOMUtils":"../node_modules/history/DOMUtils.js"}],"assets/project1.png":[function(require,module,exports) {
-module.exports = "/project1.0e13da1c.png";
-},{}],"assets/project2.png":[function(require,module,exports) {
-module.exports = "/project2.d48872d8.png";
-},{}],"assets/project3.png":[function(require,module,exports) {
-module.exports = "/project3.592b562e.png";
+},{"warning":"../node_modules/history/node_modules/warning/browser.js","invariant":"../node_modules/invariant/browser.js","./LocationUtils":"../node_modules/history/LocationUtils.js","./PathUtils":"../node_modules/history/PathUtils.js","./createTransitionManager":"../node_modules/history/createTransitionManager.js","./DOMUtils":"../node_modules/history/DOMUtils.js"}],"assets/restaurant.png":[function(require,module,exports) {
+module.exports = "/restaurant.6fdc7676.png";
+},{}],"assets/ReactJS.png":[function(require,module,exports) {
+module.exports = "/ReactJS.b2924396.png";
+},{}],"assets/Freelance.png":[function(require,module,exports) {
+module.exports = "/Freelance.dd2c1959.png";
+},{}],"assets/Crime.png":[function(require,module,exports) {
+module.exports = "/Crime.b669b09c.png";
 },{}],"data/projects.js":[function(require,module,exports) {
 "use strict";
 
@@ -29446,32 +29448,40 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _project = _interopRequireDefault(require("../assets/project1.png"));
+var _restaurant = _interopRequireDefault(require("../assets/restaurant.png"));
 
-var _project2 = _interopRequireDefault(require("../assets/project2.png"));
+var _ReactJS = _interopRequireDefault(require("../assets/ReactJS.png"));
 
-var _project3 = _interopRequireDefault(require("../assets/project3.png"));
+var _Freelance = _interopRequireDefault(require("../assets/Freelance.png"));
+
+var _Crime = _interopRequireDefault(require("../assets/Crime.png"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var PROJECTS = [{
   id: 1,
-  title: 'Example React App',
+  title: 'Foodtrack website',
   description: 'A React App that I built, involving JS and web dev concepts!',
   link: 'https://github.com/TedMur/Portfolio/tree/master/reactJs/portfolio',
-  image: _project.default
+  image: _restaurant.default
 }, {
   id: 2,
-  title: 'My API',
-  description: 'A REST API I built from scratch with GET and POST requests!',
+  title: 'React website',
+  description: 'A React App that I built, involving JS and web dev concepts!',
   link: 'https://github.com/TedMur/Portfolio/tree/master/reactJs/portfolio',
-  image: _project2.default
+  image: _ReactJS.default
 }, {
   id: 3,
-  title: 'Operating Systems Final Project',
-  description: 'My uniques final project for data analytics bootcamp',
+  title: 'Freelance',
+  description: 'My freelance web design/development project',
   link: 'https://github.com/TedMur/Portfolio/tree/master/reactJs/portfolio',
-  image: _project3.default
+  image: _Freelance.default
+}, {
+  id: 4,
+  title: 'Crime',
+  description: 'Kanas City Crime analysis',
+  link: 'https://sashabridges.github.io/DowntownData/index.html',
+  image: _Crime.default
 }];
 var _default = PROJECTS; // const PROJECTS = [
 //     {
@@ -29499,7 +29509,7 @@ var _default = PROJECTS; // const PROJECTS = [
 // export default PROJECTS;
 
 exports.default = _default;
-},{"../assets/project1.png":"assets/project1.png","../assets/project2.png":"assets/project2.png","../assets/project3.png":"assets/project3.png"}],"components/Projects.js":[function(require,module,exports) {
+},{"../assets/restaurant.png":"assets/restaurant.png","../assets/ReactJS.png":"assets/ReactJS.png","../assets/Freelance.png":"assets/Freelance.png","../assets/Crime.png":"assets/Crime.png"}],"components/Projects.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29513,23 +29523,6 @@ var _projects = _interopRequireDefault(require("../data/projects"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// Import Libraries 1
-// // 3 by using props, create objects that shows all properties on PROJECT
-// // 4 then do the styling
-// class Project extends Component {
-//     render() {
-//         const {title, image, description, link} = this.props.project;
-//         return(
-//             <div style={{display: 'inline-block', width: 500, margin: 20}}>
-//                 <h3 className='project-each-title'>{title}</h3>
-//                 <img src={image} alt='profile' style={{width: 200, height: 120}}></img>
-//                 <p>{description}</p>
-//                 <a href={link}>{link}</a>
-//             </div>
-//         )
-//     }
-// }
-// Using code above, create functions directly returns JSX(stateless function arrow syntax)
 var Project = function Project(props) {
   var _props$project = props.project,
       title = _props$project.title,
@@ -29552,8 +29545,11 @@ var Project = function Project(props) {
       height: 120
     }
   }), _react.default.createElement("p", null, description), _react.default.createElement("a", {
-    href: link
-  }, link));
+    href: link,
+    See: true,
+    Work: true,
+    className: "button"
+  }, "See Work"));
 };
 
 var Projects = function Projects() {
@@ -29567,66 +29563,9 @@ var Projects = function Projects() {
       project: PROJECT
     }, PROJECT);
   })));
-}; // 2 Create project component with extension 
+};
 
-
-var _default = Projects; // class Project extends Component {
-//     render() {
-//             const { title, image, description, link } = this.props.project;
-//             return(
-//                 <div style={{display: 'inline-block', margin: 15}}>
-//                     <h3>{title}</h3>
-//                     <img src={image} alt='profile' style={{height: 120, width: 200}}/>
-//                     <p>{description}</p>
-//                     <a href={link}>{link}</a>
-//                 </div>
-//             )
-//     }
-// }
-// ================================================================
-// 2 Create project component with extension 
-// class Projects extends Component {
-//     render () {
-//         return(
-//             <div>
-//                 <h2>Highlighted</h2>
-//                 <div>
-//                     { PROJECTS.map( PROJECT => {
-//                         return(
-//                             <Project key={PROJECT.id} project={PROJECT}/>
-//                         );
-//                     })}
-//                 </div>
-//             </div>
-//         )
-//     }
-// }
-// // Import libraries
-// import React, { Component } from 'react';
-// import PROJECTS from './data/projects';
-// // Make project component with extension
-// class Projects extends Component {
-//     render() {
-//         return(
-//             <div>
-//                 <h2>Highlighted Projects</h2>
-//                 <div>
-//                     {
-//                         PROJECTS.map( PROJECT => {
-//                             return (
-//                                 <div key={PROJECT.id}>
-//                                     {PROJECT.title}
-//                                 </div>
-//                             );
-//                         })
-//                     }
-//                 </div>
-//             </div>
-//         )
-//     }
-// }
-// export default Projects;
-
+var _default = Projects;
 exports.default = _default;
 },{"react":"../node_modules/react/index.js","../data/projects":"data/projects.js"}],"assets/email_icon.png":[function(require,module,exports) {
 module.exports = "/email_icon.d6c23642.png";
@@ -29709,7 +29648,7 @@ var SocialProfile = function SocialProfile(props) {
 };
 
 var SocialProfiles = function SocialProfiles() {
-  return _react.default.createElement("div", null, _react.default.createElement("h2", null, "Connect with me!"), _react.default.createElement("div", null, _socialProfiles.default.map(function (SOCIAL_PROFILE) {
+  return _react.default.createElement("div", null, _react.default.createElement("div", null, _socialProfiles.default.map(function (SOCIAL_PROFILE) {
     return _react.default.createElement(SocialProfile, {
       key: SOCIAL_PROFILE.id,
       socialProfile: SOCIAL_PROFILE
@@ -29752,7 +29691,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 // Define various titles that we want to appear in the animation.
-var TITLES = ['a software engineer', 'an enthusiastic learner', 'an adventure seeker'];
+var TITLES = ['Front-end Web Developer', 'Web Deigner', 'Data Analyst'];
 
 var Title =
 /*#__PURE__*/
@@ -29790,8 +29729,8 @@ function (_Component) {
           return _this.setState({
             fadeIn: false
           });
-        }, 2000);
-      }, 4000);
+        }, 3000);
+      }, 5000);
       console.log('this.titleInterval', _this.titleInterval);
     });
 
@@ -29830,7 +29769,7 @@ function (_Component) {
       var title = TITLES[this.state.titleIndex];
       return _react.default.createElement("p", {
         className: fadeIn ? 'title-fade-in' : 'title-fade-out'
-      }, "I am ", title);
+      }, title);
     }
   }]);
 
@@ -29839,8 +29778,29 @@ function (_Component) {
 
 var _default = Title;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"assets/profilePhoto.jpg":[function(require,module,exports) {
-module.exports = "/profilePhoto.74d9efe7.jpg";
+},{"react":"../node_modules/react/index.js"}],"components/Contacts.js":[function(require,module,exports) {
+// import React from 'react';
+// import CONTACTS from '../data/contacts';
+// const Contact = props => {
+//     const { link, name } = props.contact;
+//     return (
+//         <div style={{ display: 'inline-block' }}>
+//             <a href={link}>{name}</a>
+//         </div>
+//     )
+// }
+// const Contacts = () => (
+//     <div>
+//         <div>
+//             {
+//                 CONTACTS.map( CONTACT => {
+//                     return(<Contact key={CONTACT.id} contact={CONTACT} />);
+//                 })
+//             }
+//         </div>
+//     </div>
+// )
+// export default Contacts;
 },{}],"components/App.js":[function(require,module,exports) {
 "use strict";
 
@@ -29857,7 +29817,7 @@ var _SocialProfiles = _interopRequireDefault(require("./SocialProfiles"));
 
 var _Title = _interopRequireDefault(require("./Title"));
 
-var _profilePhoto = _interopRequireDefault(require("../assets/profilePhoto.jpg"));
+var _Contacts = _interopRequireDefault(require("./Contacts"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29905,19 +29865,9 @@ function (_Component) {
       displayBio: false
     });
 
-    _defineProperty(_assertThisInitialized(_this), "state", {
-      displaySkills: false
-    });
-
     _defineProperty(_assertThisInitialized(_this), "toggleDisplayBio", function () {
       _this.setState({
         displayBio: !_this.state.displayBio
-      });
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "toggleDisplaySkills", function () {
-      _this.setState({
-        displaySkills: !_this.state.displaySkills
       });
     });
 
@@ -29928,14 +29878,10 @@ function (_Component) {
     key: "render",
     value: function render() {
       return _react.default.createElement("div", null, _react.default.createElement("div", {
-        className: "top"
-      }, _react.default.createElement("img", {
-        src: _profilePhoto.default,
-        alt: "profile",
-        className: "profile"
-      }), _react.default.createElement("h1", {
+        className: "Profile"
+      }, _react.default.createElement("h1", {
         className: "Name"
-      }, "Tatsuya Tad Murao"), this.state.displayBio ? _react.default.createElement(_Title.default, null) : null, _react.default.createElement("p", {
+      }, "Tatsuya Tad Murao"), _react.default.createElement(_Title.default, null), _react.default.createElement("p", {
         className: "Summary"
       }, "I am a freelance web designer/developer with experience primarily in HTML5, CSS3, Bootstrap, JavaScript and Python, and becoming familiar with React.js. I am passionate and enjoy learning new technologies which have helped me to complete 22 weeks at KU Data Analytics Bootcamp. \u3000  "), this.state.displayBio ? _react.default.createElement("div", null, _react.default.createElement("p", null, "Through coursework and group projects at the Bootcamp, I developed practical skills for web development languages and software, like Python libraries, database management software, and data visualization tools. I am currently working as a web designer for a client\u2019s website by adding functions and reorganizing the appearance. I am also working on my React.js project to improve my skillsets. Not only have I developed technological skills, but I am also improving interpersonal skills, flexibility, and proactiveness by working as a retail sales associate, volunteering as a translator and interpreter and teaching Japanese language and culture."), _react.default.createElement("button", {
         onClick: this.toggleDisplayBio,
@@ -29943,83 +29889,16 @@ function (_Component) {
       }, "Read Less")) : _react.default.createElement("div", null, _react.default.createElement("button", {
         onClick: this.toggleDisplayBio,
         className: "button"
-      }, "Show More"))), _react.default.createElement("div", null, _react.default.createElement("h2", null, "Skills"), _react.default.createElement("ul", null, _react.default.createElement("li", null, "JavaScript"), _react.default.createElement("li", null, "Python"), _react.default.createElement("li", null, "MySQL")), _react.default.createElement("ul", null, this.state.displaySkills ? _react.default.createElement("div", null, _react.default.createElement("li", null, "HTML5"), _react.default.createElement("li", null, "CSS3"), _react.default.createElement("li", null, "GitHub"), _react.default.createElement("button", {
-        onClick: this.toggleDisplaySkills,
-        className: "button"
-      }, "Show Less")) : _react.default.createElement("div", null, _react.default.createElement("button", {
-        onClick: this.toggleDisplaySkills,
-        className: "button"
-      }, "Show More")))), _react.default.createElement(_Projects.default, null), _react.default.createElement(_SocialProfiles.default, null));
+      }, "Show More"))), _react.default.createElement(_Projects.default, null), _react.default.createElement(_SocialProfiles.default, null));
     }
   }]);
 
   return App;
 }(_react.Component);
 
-var _default = App; // constructor() {
-//     super();
-//     this.state = { displayBio: false };
-//     this.state = { displaySkills: false };
-//     this.toggleDisplayBio = this.toggleDisplayBio.bind(this);
-//     this.toggleDisplaySkills = this.toggleDisplaySkills.bind(this);
-// }
-// // Giving expand and collapse function to a button
-// // Giving expand and collapse function to a button by flipping state but less coding
-// toggleDisplayBio() {
-//     this.setState({ displayBio: !this.state.displayBio });
-// }
-// toggleDisplaySkills() {
-//     this.setState({ displaySkills: !this.state.displaySkills });
-// }
-// ==============================================================================
-//     <div>
-//     <h1>Tatsuya Tad Murao</h1>
-//     <p>I am a freelance web designer/developer with experience primarily in HTML5, CSS3, Bootstrap, JavaScript and Python, and becoming familiar with React.js.
-//        I am passionate and enjoy learning new technologies which have helped me to complete 22 weeks at KU Data Analytics Bootcamp. 
-//     </p>
-//     {
-//         this.state.displayBio ? (
-//         <div>
-//             <p>
-//                 Through coursework and group projects at the Bootcamp, I developed practical skills for web development languages and software, like Python libraries, database management software, and data visualization tools. I am currently working as a web designer for a client’s website by adding functions and reorganizing the appearance. I am also working on my React.js project to improve my skillsets.
-//                 Not only have I developed technological skills, but I am also improving interpersonal skills, flexibility, and proactiveness by working as a retail sales associate, volunteering as a translator and interpreter and teaching Japanese language and culture.
-//             </p>
-//             <button onClick={this.toggleDisplayBio}>Show Less</button>
-//         </div> 
-//         ) : (
-//         <div>
-//             <button onClick={this.toggleDisplayBio}>Read More</button>
-//         </div>
-//         )
-//     }<hr />
-//     <div>
-//         <h2>Skills</h2>
-//         <ul>
-//             <li>JavaScript</li>
-//             <li>Python</li>
-//             <li>MySQL</li>
-//         </ul>
-//         <ul>
-//             {this.state.displaySkills ? (
-//             <div>
-//                 <li>HTML5</li>
-//                 <li>CSS3</li>
-//                 <li>GitHub</li>
-//                 <button onClick={this.toggleDisplaySkills}>Show Less</button>
-//             </div>
-//             ) : (
-//                 <div>
-//                     <button onClick={this.toggleDisplaySkills}>Show More</button>
-//                 </div>
-//             )
-//             }
-//         </ul>
-//     </div>
-// </div>
-// )
-
+var _default = App;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./Projects":"components/Projects.js","./SocialProfiles":"components/SocialProfiles.js","./Title":"components/Title.js","../assets/profilePhoto.jpg":"assets/profilePhoto.jpg"}],"components/Jokes.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./Projects":"components/Projects.js","./SocialProfiles":"components/SocialProfiles.js","./Title":"components/Title.js","./Contacts":"components/Contacts.js"}],"components/Jokes.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -33260,23 +33139,37 @@ var Header = function Header(_ref) {
     margin: 10,
     marginBotton: 30
   };
-  return _react.default.createElement("div", null, _react.default.createElement("div", null, _react.default.createElement("h3", {
+  return _react.default.createElement("div", null, _react.default.createElement("div", {
+    className: "Header"
+  }, _react.default.createElement("h3", {
     style: style
   }, _react.default.createElement(_reactRouterDom.Link, {
     to: "/"
-  }, "Home")), _react.default.createElement("h3", {
+  }, "HOME")), _react.default.createElement("h3", {
     style: style
   }, _react.default.createElement(_reactRouterDom.Link, {
     to: "/jokes"
-  }, "Jokes")), _react.default.createElement("h3", {
+  }, "JOKES")), _react.default.createElement("h3", {
     style: style
   }, _react.default.createElement(_reactRouterDom.Link, {
     to: "/music-master"
-  }, "Music Master")), _react.default.createElement("h3", {
+  }, "MUSIC API")), _react.default.createElement("h3", {
     style: style
   }, _react.default.createElement(_reactRouterDom.Link, {
     to: "/evens-or-odds"
-  }, "Evens or Odds"))), children);
+  }, "CARD GAME API")), _react.default.createElement("h3", {
+    style: style
+  }, _react.default.createElement(_reactRouterDom.Link, {
+    to: "/evens-or-odds"
+  }, "WROK")), _react.default.createElement("h3", {
+    style: style
+  }, _react.default.createElement(_reactRouterDom.Link, {
+    to: "/evens-or-odds"
+  }, "ABOUT")), _react.default.createElement("h3", {
+    style: style
+  }, _react.default.createElement(_reactRouterDom.Link, {
+    to: "/evens-or-odds"
+  }, "CONTACT"))), children);
 };
 
 var _default = Header;
@@ -33286,7 +33179,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./assets/economica-bold.ttf":[["economica-bold.12a9e27d.ttf","assets/economica-bold.ttf"],"assets/economica-bold.ttf"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
+},{"./assets/KCDowntown-bw.png":[["KCDowntown-bw.62114725.png","assets/KCDowntown-bw.png"],"assets/KCDowntown-bw.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -33372,7 +33265,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63906" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62388" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
